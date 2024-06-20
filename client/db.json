@@ -1,0 +1,13 @@
+{
+  "tasks":[
+    {
+      "date": "2024-06-17T00:00:00Z",
+      "entity_name": "Com 1",
+      "task_type": "Call",
+      "time_of_the_task": "1 pm",
+      "contact_person": "Frodo Baggins",
+      "note": "This is a note.",
+      "status": "open" 
+    }
+  ]
+}

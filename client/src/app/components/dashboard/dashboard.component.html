@@ -1,0 +1,148 @@
+<div>
+<nav class="navbar navbar-light" style="background-color: #054b6f;">
+    <div class="container-fluid">
+        <span>
+            <h2 style="color: white;">Private Circle</h2>
+        </span>
+        
+        <span class="search-bar">
+            <form>
+                <span style="color: white; background-color: darkgrey; padding: 1rem;">Companies v</span>
+                <input type="text" class="form-control ml-2" style="padding: 1rem;">
+            </form>
+        </span>
+        
+        <div class="">
+            <ul>
+                <span style="color: white; padding: 1rem;">DASHBOARD v</span>
+                <span style="color: white; padding: 1rem;">COMPANIES v</span>
+                <span style="color: white; padding: 1rem;">FUNDS v</span>
+                <span style="color: white; padding: 1rem;">HNT'S v</span>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<div class="container-fluid bg-light p-5 mt-7">
+    <div class="shadow">
+        <div class="sales-logs bg-light">
+            <span>
+                SALES LOG
+                <form>
+                    <button type="submit" class="task-add" data-bs-toggle="modal" data-bs-target="#add-taskModal"> + New Task</button>
+                </form>
+            </span>
+            <span>
+                
+            </span>
+            <span>
+                <form>
+                    <input class="search-input" type="search" placeholder="search">
+                </form>
+            </span>
+        </div>
+
+        <!-- <div class="task-type">
+            <p>Task Type</p>
+        </div> -->
+<div *ngIf="tasks.length > 0;">
+        <table class="table bg-white">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Entity Name</th>
+                <th scope="col">Task Type</th>
+                <th scope="col">Time</th>
+                <th scope="col">Contact Person</th>
+                <th scope="col">Notes</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of tasks">
+                <td>{{ task.date }}</td>
+                <td>{{ task.entityName }}</td>
+                <td>{{ task.taskType }}</td>
+                <td>{{ task.time }}</td>
+                <td>{{ task.contactPerson }}</td>
+                <td>{{ task.note }}</td>
+                <td>{{ task.status }}</td>
+                <td>
+                    <form>
+                        <select name="options">Options</select>
+                    </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="add-taskModal" tabindex="-1" role="dialog" aria-labelledby="add-taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">NEW TASK</h5>
+          <div class="status-buttons">
+            <button type="button" class="status-open">Open</button>
+            <button type="button" class="status-closed">Closed</button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <form #addTask="ngForm" (ngSubmit)="submitTask(addTask)">
+            <div class="form-group">
+              <input type="text" class="form-control" id="entity-name" name="entityName" placeholder="Entity name" ngModel>
+            </div>
+          
+            <div class="form-group time">
+              <input type="datetime" class="form-control" id="date" name="date" placeholder="Date" ngModel>
+              
+              <select class="form-control" name="hour" [(ngModel)]="selectedHour">
+                <option value="12" *ngFor="let hour of hours">{{ hour }}</option>
+              </select>
+          
+              <select class="form-control" name="minute" [(ngModel)]="selectedMinute">
+                <option value="00" *ngFor="let minute of minutes">{{ minute }}</option>
+              </select>
+          
+              <select class="form-control" name="ampm" [(ngModel)]="selectedAmpm">
+                <option >AM</option>
+                <option selected>PM</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <select class="form-control" name="taskType" [(ngModel)]="selectedTaskType">
+                <option selected>Call</option>
+                <option>Meeting</option>
+                <option>Video Call</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <input type="number" class="form-control" id="phone-number" name="phoneNumber" placeholder="Phone number" ngModel>
+            </div>
+          
+            <div class="form-group">
+              <input type="text" class="form-control" id="contact-person" name="contactPerson" placeholder="Contact person" ngModel>
+            </div>
+          
+            <div class="form-group">
+              <textarea class="form-control" id="note" placeholder="Note (optional)" name="note" ngModel></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" id="cancel" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" id="save">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

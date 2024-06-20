@@ -1,0 +1,123 @@
+.modal-body {
+  border-style: none;
+  margin: 0 2rem;
+
+  #date {
+    width: 45%;
+  }
+
+  #hour {
+    width: 17%;
+  }
+
+  #min {
+    width: 17%;
+  }
+
+  #task-type {
+    border: none;
+    width: 100%;
+  }
+}
+
+.modal-header {
+  padding: 2rem;
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1rem;
+
+  #cancel {
+    background-color: white;
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #save {
+    background-color: #054b6f;
+    border: none;
+    padding: 0.75rem;
+    color: white;
+    width: 6rem;
+  }
+}
+
+input {
+  margin: 0.5rem;
+}
+
+.status-buttons {
+  position: absolute;
+  right: 2rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+
+  #open {
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #close {
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #open.focused {
+    background-color: orange;
+    color: white;
+  }
+
+  #close.focused {
+    background-color: orange;
+    color: white;
+  }
+}
+
+.mod {
+  height: 80%;
+  width: 70%;
+  border: 1px solid;
+  position: relative;
+}
+
+.modal-dialog {
+  padding: 1rem;
+}
+
+/* input[type="time"] {
+  border: none;
+  width: 180px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+  `-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+/* input[type="time"]::-webkit-datetime-edit-hour-field {
+  padding: 19px 13px;
+}
+
+/* Minute */
+/* input[type="time"]::-webkit-datetime-edit-minute-field {
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+/* input[type="time"]::-webkit-datetime-edit-ampm-field {
+  padding: 19px 13px;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+/* input[type="time"]::-webkit-inner-spin-button {
+} */
+
+.time {
+  display: flex;
+  flex-direction: row;
+}

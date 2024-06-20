@@ -1,0 +1,143 @@
+/* .task-type {
+  background-color: lightblue;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2rem;
+} */
+
+.sales-logs {
+  background-color: darkgrey;
+  padding: 1rem;
+}
+
+table {
+  padding: 5rem;
+  text-align: left;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-style: none;
+}
+
+.sales-log {
+  display: inline;
+}
+
+.search-input {
+  display: inline;
+  position: absolute;
+  right: 2rem;
+  margin-left: 1rem;
+  width: 30%;
+}
+
+.task-add {
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+  width: 8rem;
+}
+
+.search-input {
+  border-style: none;
+  background-color: white;
+  padding: 0.5rem;
+  right: 0.5rem;
+  position: relative;
+}
+
+form {
+  display: inline;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+.modal-body {
+  border-style: none;
+  margin: 0 2rem;
+
+  #date {
+    width: 45%;
+  }
+
+  #hour {
+    width: 17%;
+  }
+
+  #min {
+    width: 17%;
+  }
+
+  #task-type {
+    border: none;
+    width: 100%;
+  }
+}
+
+.modal-header {
+  padding: 2rem;
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+  padding: 1rem;
+
+  #cancel {
+    background-color: white;
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #save {
+    background-color: #054b6f;
+    border: none;
+    padding: 0.75rem;
+    color: white;
+    width: 6rem;
+  }
+}
+
+.status-buttons {
+  position: absolute;
+  right: 2rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+
+  #open {
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #close {
+    border: none;
+    padding: 0.75rem;
+    width: 6rem;
+  }
+
+  #open.focused {
+    background-color: orange;
+    color: white;
+  }
+
+  #close.focused {
+    background-color: orange;
+    color: white;
+  }
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,70 @@
+<div class="mod">
+
+<div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">NEW TASK</h5>
+          <span class="status-buttons">
+            <button type="button" id="open">Open</button>
+            <button type="button" id="close">Closed</button>
+          </span>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="entity-name" placeholder="Entity name">
+            </div>
+
+            <div class="form-group">
+                
+            </div>            
+
+            <div class="form-group time">
+                <input type="datetime" class="form-control" id="date" placeholder="Date">
+                
+                <select class="form-control" id="hour">
+                    <option>01</option>
+                </select>
+
+                  <select class="form-control" id="min">
+                    <option>10</option>
+                  </select>
+
+                  <select>
+                    <option>AM</option>
+                    <option>PM</option>
+                  </select>
+                </div>
+                <!-- <input type="time" value="12:00"> -->
+
+            <div class="form-group">
+              <select id="task-type">
+                <option>Call</option>
+                <option>Meeting</option>
+                <option>Video Call</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <input type="number" class="form-control" id="phone-number" placeholder="Phone number">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="contact-person" placeholder="Contact person">
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" id="note" placeholder="Note (optional)"></textarea>
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="cancel" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" id="save">Save</button>
+        </div>
+      </div>
+    </div>
+</div>
